@@ -35,7 +35,7 @@ window.SITE_CONFIG = {
       icon: "📱",
       description: "Android app (v2.0.0-forensic, Kotlin + Jetpack Compose) that scans a device for traces left behind after previously used software is removed. Experimental tool for local analysis — not a security suite, no accuracy claims.",
       tags: ["Kotlin", "Jetpack Compose", "Material 3", "Android SDK", "Gradle"],
-      repo: "",        // TODO: paste repo URL when public
+      repo: "https://github.com/tekkenlalit143/Mincraft-Forensic-Scanner",
       demo: "",
       details: "",
       placeholder: false
