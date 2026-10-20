@@ -18,16 +18,30 @@ window.SITE_CONFIG = {
   },
 
   projects: [
+    /* NOTE: The standalone ACR Mod card was replaced by the Minecraft Mods
+       collection card below (per request). ACR Mod ≠ AMR – Auto Chat Reply
+       (AMR is a separate mod inside the collection). Original ACR entry kept
+       here so nothing is lost — paste it back if ACR should stay visible:
     {
       name: "ACR Mod",
       category: "Minecraft Development",
       icon: "⛏️",
       description: "Minecraft project linked from my earlier portfolio. I'm confirming the exact version, features, and repo URL — details will appear here once verified.",
       tags: ["Minecraft", "Java", "TODO: version"],
-      repo: "",        // TODO: paste repo URL when public
+      repo: "", demo: "", details: "", placeholder: true
+    },
+    */
+    {
+      name: "Minecraft Mods",
+      category: "Minecraft Development",
+      icon: "⛏️",
+      description: "A collection of Minecraft mods I've developed to customize gameplay, improve rendering performance, and make everyday tasks easier.",
+      tags: ["Fabric", "1.21.11", "3 mods"],
+      repo: "",
       demo: "",
       details: "",
-      placeholder: true
+      link: "mods.html",
+      linkLabel: "Explore Mods"
     },
     {
       name: "Minecraft Forensic Scanner",

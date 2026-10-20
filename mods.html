@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Minecraft Mods | Lalit Prajapat</title>
+  <meta name="description" content="Minecraft mods built by Lalit Prajapat — check requirements and download the JAR files directly." />
+  <meta name="theme-color" content="#0B0D0F" />
+  <meta property="og:title" content="My Minecraft Mods | Lalit Prajapat" />
+  <meta property="og:description" content="Small tools and modifications for Minecraft — explore each mod and download the JAR directly." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Lalit Prajapat home">
+        <span class="brand-mark" aria-hidden="true">LP</span>
+        <span class="brand-text">Lalit Prajapat</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          <li class="nav-cta-item"><a href="index.html#contact" class="btn btn-primary btn-sm">Let's Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section container mods-hero">
+      <a class="back-link mono" href="index.html#projects">← Back to Portfolio</a>
+      <p class="eyebrow mono">MINECRAFT MODS</p>
+      <h1 class="mods-title">My Minecraft Mods</h1>
+      <p class="section-sub mods-sub">Small tools and modifications I've built to improve my Minecraft experience. Explore each mod, check its requirements, and download the JAR file directly.</p>
+
+      <div class="mods-tools">
+        <label class="sr-only" for="modSearch">Search mods by name or description</label>
+        <input class="mod-search" id="modSearch" type="search" placeholder="Search mods by name or description…" autocomplete="off" />
+        <p class="mods-count mono" id="modsCount" role="status">3 mods</p>
+      </div>
+      <p class="no-results muted" id="noResults" hidden>No mods match your search.</p>
+
+      <div class="mod-grid" id="modGrid"><!-- rendered by js/mods-page.js from js/mods.js --></div>
+
+      <p class="config-hint mono">All mods are client-side Fabric mods. Install by dropping the JAR into your <code>mods</code> folder — matching loader + dependencies required (listed on each card).</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">Lalit Prajapat</p>
+        <p class="footer-tag">Built with curiosity and code.</p>
+      </div>
+      <div class="footer-social" id="footerSocial"></div>
+      <p class="footer-copy">© <span id="year">2026</span> Lalit Prajapat</p>
+    </div>
+  </footer>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/mods.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/mods-page.js"></script>
+</body>
+</html>

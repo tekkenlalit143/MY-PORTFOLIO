@@ -8,7 +8,7 @@
   $("#year").textContent = new Date().getFullYear();
 
   /* ---- Profile image (optional) ---- */
-  if (cfg.profileImage) {
+  if (cfg.profileImage && $("#profileImg")) {
     const img = $("#profileImg");
     img.src = cfg.profileImage;
     img.alt = (cfg.name || "Lalit Prajapat") + " profile photo";
@@ -20,9 +20,10 @@
   /* ---- Projects ---- */
   const grid = $("#projectGrid");
   const projects = Array.isArray(cfg.projects) ? cfg.projects : [];
-  grid.innerHTML = projects.map((p) => {
+  if (grid) grid.innerHTML = projects.map((p) => {
     const tags = (p.tags || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("");
     const btns = [];
+    if (p.link) btns.push(`<a class="btn btn-primary btn-sm" href="${escapeAttr(p.link)}">${escapeHtml(p.linkLabel || "Open")}</a>`);
     if (p.repo) btns.push(`<a class="btn btn-outline" href="${escapeAttr(p.repo)}" target="_blank" rel="noopener">GitHub</a>`);
     if (p.demo) btns.push(`<a class="btn btn-outline" href="${escapeAttr(p.demo)}" target="_blank" rel="noopener">Live Demo</a>`);
     if (p.details) btns.push(`<a class="btn btn-outline" href="${escapeAttr(p.details)}">Details</a>`);
@@ -42,7 +43,7 @@
 
   /* ---- Skills ---- */
   const sg = $("#skillsGrid");
-  sg.innerHTML = (cfg.skills || []).map((s) => `
+  if (sg) sg.innerHTML = (cfg.skills || []).map((s) => `
     <div class="skill-card reveal">
       <h3>${escapeHtml(s.title)}</h3>
       <div class="tag-row">${(s.items || []).map((i) => `<span class="tag">${escapeHtml(i)}</span>`).join("")}</div>
@@ -107,7 +108,7 @@
   async function copyText(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       try { await navigator.clipboard.writeText(text); return true; }
-      catch { /* fall through to legacy */ }
+      catch (eErr) { /* fall through to legacy */ }
     }
     try {
       const ta = document.createElement("textarea");
@@ -119,7 +120,7 @@
       const ok = document.execCommand("copy");
       ta.remove();
       return ok;
-    } catch { return false; }
+    } catch (eErr) { return false; }
   }
   function flashMsg(el, text, isError) {
     if (!el) return;
