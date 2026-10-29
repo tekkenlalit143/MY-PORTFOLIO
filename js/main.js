@@ -10,11 +10,11 @@
   /* ---- Profile image (optional) ---- */
   if (cfg.profileImage && $("#profileImg")) {
     const img = $("#profileImg");
+    img.src = cfg.profileImage;
+    img.alt = (cfg.name || "Lalit Prajapat") + " profile photo";
+    img.hidden = false;
     img.onload = () => { img.previousElementSibling && img.previousElementSibling.remove(); };
     img.onerror = () => { img.remove(); };
-    img.alt = (cfg.name || "Lalit Prajapat") + " profile photo";
-    img.src = cfg.profileImage;
-    img.hidden = false;
   }
 
   /* ---- Projects ---- */

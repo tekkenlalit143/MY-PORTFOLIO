@@ -5,7 +5,7 @@
    ============================================================ */
 window.SITE_CONFIG = {
   name: "Lalit Prajapat",
-  profileImage: "assets/lalit-profile.png",
+  profileImage: "", // TODO: e.g. "assets/profile.jpg" — leave "" to keep LP placeholder
 
   // Contact details — values below are rendered as interactive cards.
   contact: {
