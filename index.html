@@ -43,34 +43,23 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero container" id="home" aria-labelledby="hero-heading">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow mono">DEVELOPER PORTFOLIO</p>
-          <h1 id="hero-heading">Hey, I'm Lalit Prajapat.</h1>
-          <p class="hero-sub">I build digital experiences, useful tools, and automation that solve real problems.</p>
-          <p class="hero-desc">I'm a technology enthusiast interested in web development, Android applications, Discord bots, and Minecraft development. I enjoy exploring new technologies and building practical, user-friendly solutions.</p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Explore My Projects</a>
-            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-          </div>
-          <p class="hero-meta mono"><span class="status-dot" aria-hidden="true"></span> building &amp; learning — open to interesting ideas</p>
+      <div class="hero-inner">
+        <p class="eyebrow mono reveal">DEVELOPER PORTFOLIO</p>
+        <h1 class="hero-title reveal" id="hero-heading">
+          <span>Hey, I'm</span>
+          <span class="hero-avatar">
+            <span class="avatar-fallback mono" aria-hidden="true">LP</span>
+            <img id="profileImg" alt="Portrait of Lalit Prajapat" hidden />
+          </span>
+          <span>Lalit Prajapat!</span>
+        </h1>
+        <p class="hero-sub reveal">I'm passionate about <strong>technology</strong> and <strong class="accent-text">building things.</strong></p>
+        <p class="hero-desc reveal">I enjoy exploring technology, building projects as a hobby, and learning something new every day. My interests include web development, Android apps, Discord bots, and Minecraft tools.</p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
         </div>
-        <div class="hero-visual">
-          <div class="profile-card" role="img" aria-label="Profile placeholder for Lalit Prajapat — replace with your photo">
-            <div class="profile-avatar" aria-hidden="true">
-              <span>LP</span>
-              <img id="profileImg" alt="" hidden />
-            </div>
-            <div class="profile-info">
-              <p class="profile-name">Lalit Prajapat</p>
-              <p class="profile-role mono">web • android • discord • minecraft</p>
-            </div>
-            <div class="profile-terminal mono" aria-hidden="true">
-              <span class="t-green">$</span> whoami<br />
-              <span class="t-dim">→ builder, learner, problem-solver</span>
-            </div>
-          </div>
-        </div>
+        <p class="hero-meta mono reveal"><span class="status-dot" aria-hidden="true"></span> building &amp; learning — at my own pace</p>
       </div>
     </section>
 
@@ -87,20 +76,20 @@
 
     <!-- ABOUT -->
     <section class="section container" id="about" aria-labelledby="about-heading">
-      <div class="about-grid">
-        <div class="reveal">
-          <p class="eyebrow mono">ABOUT</p>
-          <h2 id="about-heading">A Little About Me</h2>
-          <p>Hey, I'm Lalit Prajapat! I'm passionate about technology and enjoy exploring things that interest me. I love learning something new every day, experimenting with ideas, and building small projects along the way. For me, coding is more than just a skill — it's a hobby that lets me explore my curiosity and turn ideas into reality.</p>
-          <p class="muted">I'm always learning, trying new things, and improving at my own pace. This website is where I share some of the projects I've worked on and the things I enjoy creating.</p>
-        </div>
-        <ul class="focus-list reveal" aria-label="Focus areas">
-          <li><span class="focus-icon" aria-hidden="true">▣</span><div><strong>Building Things</strong><span>Turning my ideas into small, useful projects.</span></div></li>
-          <li><span class="focus-icon" aria-hidden="true">⚙</span><div><strong>Exploring Technology</strong><span>Trying new tools and discovering how things work.</span></div></li>
-          <li><span class="focus-icon" aria-hidden="true">◍</span><div><strong>Learning Every Day</strong><span>Learning something new whenever I get the chance.</span></div></li>
-          <li><span class="focus-icon" aria-hidden="true">✓</span><div><strong>Experimenting and Improving</strong><span>Experimenting, solving problems, and getting better with practice.</span></div></li>
-        </ul>
+      <div class="section-head reveal">
+        <p class="eyebrow mono">ABOUT</p>
+        <h2 id="about-heading">A Little About Me</h2>
       </div>
+      <div class="about-copy reveal">
+        <p>Hey, I'm Lalit Prajapat! I'm passionate about technology and enjoy exploring things that interest me. I love learning something new every day, experimenting with ideas, and building small projects along the way. For me, coding is more than just a skill — it's a hobby that lets me explore my curiosity and turn ideas into reality.</p>
+        <p class="muted">I'm always learning, trying new things, and improving at my own pace. This website is where I share some of the projects I've worked on and the things I enjoy creating.</p>
+      </div>
+      <ul class="focus-grid reveal" aria-label="Focus areas">
+        <li class="focus-card"><span class="focus-icon" aria-hidden="true">▣</span><div><strong>Building Things</strong><span>Turning my ideas into small, useful projects.</span></div></li>
+        <li class="focus-card"><span class="focus-icon" aria-hidden="true">⚙</span><div><strong>Exploring Technology</strong><span>Trying new tools and discovering how things work.</span></div></li>
+        <li class="focus-card"><span class="focus-icon" aria-hidden="true">◍</span><div><strong>Learning Every Day</strong><span>Learning something new whenever I get the chance.</span></div></li>
+        <li class="focus-card"><span class="focus-icon" aria-hidden="true">✓</span><div><strong>Experimenting and Improving</strong><span>Experimenting, solving problems, and getting better with practice.</span></div></li>
+      </ul>
     </section>
 
     <!-- SKILLS -->
@@ -128,10 +117,12 @@
 
     <!-- CONTACT -->
     <section class="section container" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-card reveal">
+      <div class="section-head reveal">
         <p class="eyebrow mono">CONTACT</p>
         <h2 id="contact-heading">Have an Idea? Let's Connect.</h2>
         <p class="section-sub">Interested in my work or want to discuss a project? Feel free to reach out.</p>
+      </div>
+      <div class="contact-wrap reveal">
         <div class="contact-grid" id="contactGrid">
           <!-- Discord card -->
           <article class="contact-method" id="discordCard">

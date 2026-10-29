@@ -17,9 +17,9 @@ All personal content lives in **`js/config.js`**:
 - `contact.github / discord / discordUrl / email` — leave `""` to hide that option
 - `projects[]` — name, category, description, tags, `repo` / `demo` / `details` (omit = button hidden)
 - `skills[]` — add/remove categories freely
-- `profileImage` — e.g. `"assets/profile.jpg"`; leave `""` for the LP placeholder
+- `profileImage` — currently `assets/lalit-profile.png`; set to `""` to show the LP fallback
 
-To use your own photo: drop it in `assets/` (e.g. `assets/profile.jpg`, keep it small, ~200–400px) and set `profileImage` accordingly.
+To change your photo: replace `assets/lalit-profile.png` with your image (square works best, keep it small).
 
 ## Adding a Minecraft mod (2 steps)
 
